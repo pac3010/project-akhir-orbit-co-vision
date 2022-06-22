@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./stream/deep_sort/deep/reid"
+    ]
+}

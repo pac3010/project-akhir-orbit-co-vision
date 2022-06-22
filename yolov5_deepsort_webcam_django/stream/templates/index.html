@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Co-Vision</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- CSS CUSTOM -->
+    <link href='https://fonts.googleapis.com/css?family=Merriweather Sans' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Arima Madurai' rel='stylesheet' /> 
+</head>
+
+<body class="container-konten" onload="init();">
+    <center>
+      <h1 style="font-size: 80px;">Co-Vision</h1>
+      <h2 style="color: white">Co-Vision merupakan website yang dapat melakukan tracking dan counting pada kendaraan menggunakan webcam, yang bertujuan untuk perhitungan kepadatan jalan raya.</h2>
+      <button type="button" class="fill" onclick="startWebcam1();">Start Tracking & Counting!</button>
+      <div id="open-cam" style="display: none">
+        <img src="{% url 'video_feed' %}" alt=""></img>
+      </div>
+      <p style="color: white">Note : Klik tombol untuk menampilkan atau menutup tampilan webcam</p>
+    </center>
+  
+  <script>
+  
+  
+  function startWebcam1 () {
+        var x = document.getElementById("open-cam");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+  </script>
+  
+  </body>
+  
+  </html>
